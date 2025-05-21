@@ -1,0 +1,9 @@
+Django==4.2.5
+djangorestframework==3.14.0
+channels==4.0.0
+channels-redis==4.0.0
+python-dotenv==1.0.0
+ffmpeg-python==0.2.0
+opencv-python==4.8.0.74
+websockets==11.0.3
+pillow==10.0.0
