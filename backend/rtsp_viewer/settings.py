@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-)xfkxe!-wcam1qwgxitfj)6eqmey*ch7u0=k@(@y_jl_h7=lz&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]  # Allow all for dev, restrict in production
+ALLOWED_HOSTS = ["*", "https://iam-kumarshubham.github.io/RTSP-Stream-View/"]  # Allow all for dev, restrict in production
 
 
 # Application definition

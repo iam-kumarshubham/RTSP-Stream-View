@@ -8,3 +8,4 @@ opencv-python==4.8.0.74
 websockets==11.0.3
 pillow==10.0.0
 daphne==4.0.0
+numpy<2.0.0
