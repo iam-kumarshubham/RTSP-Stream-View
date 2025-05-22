@@ -1,6 +1,35 @@
-# Getting Started with Create React App
+# RTSP Stream Viewer Frontend (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**🌐 Deployed Frontend:**
+- https://iam-kumarshubham.github.io/RTSP-Stream-View/
+
+A modern React web app for viewing RTSP streams in a responsive grid, with play/pause controls and real-time video via WebSocket.
+
+---
+
+## 🚀 Usage
+1. Open the deployed frontend link above.
+2. Enter a public RTSP stream URL (see backend README for test streams).
+3. Click **Add** to view the stream. Use play/pause controls as needed.
+
+---
+
+## 🔗 Backend Connection
+- The frontend expects a WebSocket backend at:
+  `wss://rtsp-stream-view.onrender.com/ws/stream/`
+- To use your own backend, edit `StreamCard.js` and change the WebSocket URL.
+
+---
+
+## 🌐 Deploying to GitHub Pages
+1. Set the `homepage` field in `package.json` to your repo URL.
+2. Run:
+   ```sh
+   npm run deploy
+   ```
+3. Your app will be live at the GitHub Pages link above.
+
+---
 
 ## Available Scripts
 
