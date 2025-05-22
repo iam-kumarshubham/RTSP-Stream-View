@@ -27,10 +27,14 @@ class RTSPStreamConsumer(AsyncWebsocketConsumer):
     async def stream_rtsp(self):
         try:
             cap = cv2.VideoCapture(self.rtsp_url)
+            if not cap.isOpened():
+                await self.send(text_data=json.dumps({'error': 'Failed to open RTSP stream'}))
+                return
             while True:
                 ret, frame = cap.read()
                 if not ret:
-                    await asyncio.sleep(0.5)
+                    await self.send(text_data=json.dumps({'error': 'Failed to read frame from RTSP stream'}))
+                    await asyncio.sleep(1)
                     continue
                 _, jpeg = cv2.imencode('.jpg', frame)
                 jpg_as_text = base64.b64encode(jpeg.tobytes()).decode('utf-8')
