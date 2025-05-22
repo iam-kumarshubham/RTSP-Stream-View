@@ -13,7 +13,7 @@ export default function StreamCard({ url, onRemove }) {
     if (playing && !wsRef.current) {
       setLoading(true);
       setError(null);
-      wsRef.current = new WebSocket('ws://localhost:8000/ws/stream/');
+      wsRef.current = new WebSocket('wss://rtsp-stream-view.onrender.com/ws/stream/');
       wsRef.current.onopen = () => {
         wsRef.current.send(JSON.stringify({ action: 'start', url }));
       };
